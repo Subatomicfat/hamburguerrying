@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamburgueria Delícia</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('caminho/para/a/imagem.png') no-repeat center center fixed;
+            background-size: cover;
+        }
+        header {
+            background-color: #d32f2f;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            font-size: 1.5rem;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            background-color: #b71c1c;
+            padding: 10px;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+        nav ul li a:hover {
+            color: #ffccbc;
+        }
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .menu-item {
+            background-color: white;
+            margin: 15px;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.15);
+            text-align: center;
+            width: 250px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .menu-item:hover {
+            transform: scale(1.05);
+        }
+        .menu-item img {
+            width: 100%;
+            border-radius: 10px;
+            transition: opacity 0.3s ease-in-out;
+        }
+        .menu-item img:hover {
+            opacity: 0.8;
+        }
+        button {
+            background-color: #d32f2f;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: background-color 0.3s ease-in-out;
+        }
+        button:hover {
+            background-color: #b71c1c;
+        }
+        aside {
+            width: 100%;
+            text-align: center;
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #ffeb3b;
+            font-weight: bold;
+            border-radius: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #d32f2f;
+            color: white;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hamburgueria Scklant</h1>
+        <p>Os melhores hambúrgueres da cidade!</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="menu">
+            <h2>Nosso Cardápio</h2>
+            <div class="menu-item">
+                <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fblog.biglar.com.br%2Freceitas%2Fhamburguer-artesanal-com-mix-de-queijos-e-bacon%2F&psig=AOvVaw3cx0PzHrm1ErjaWi1iY6uw&ust=1741401934528000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPD5ttD99osDFQAAAAAdAAAAABAE" alt="Hambúrguer Clássico">
+                <h3>Hambúrguer Schlássico</h3>
+                <p>Pão, carne suculenta, queijo e alface.</p>
+                <p>R$15,00</p>
+                <button onclick="adicionarAoCarrinho('Hambúrguer Clássico', 15)">Adicionar</button>
+            </div>
+            <div class="menu-item">
+                <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.cnnbrasil.com.br%2Fviagemegastronomia%2Fgastronomia%2Fdia-do-hamburguer-5-enderecos-para-comer-um-burgao-tradicional-em-sao-paulo%2F&psig=AOvVaw3cx0PzHrm1ErjaWi1iY6uw&ust=1741401934528000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPD5ttD99osDFQAAAAAdAAAAABAJ" alt="Hambúrguer Bacon">
+                <h3>Hambúrguer Schabacon</h3>
+                <p>Carne grelhada com bacon crocante.</p>
+                <p>R$18,00</p>
+                <button onclick="adicionarAoCarrinho('Hambúrguer Bacon', 18)">Adicionar</button>
+            </div>
+            <div class="menu-item">
+                <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.estadao.com.br%2Fpaladar%2Freceita%2Fhamburguer-com-cebola-caramelizada-e-bacon%2F&psig=AOvVaw3cx0PzHrm1ErjaWi1iY6uw&ust=1741401934528000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPD5ttD99osDFQAAAAAdAAAAABAT" alt="Hambúrguer Duplo">
+                <h3>Hambúrguer Schorveteiro</h3>
+                <p>Dois hambúrgueres grelhados com queijo derretido.</p>
+                <p>R$22,00</p>
+                <button onclick="adicionarAoCarrinho('Hambúrguer Duplo', 22)">Adicionar</button>
+            </div>
+            <div class="menu-item">
+                <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fgq.globo.com%2FPrazeres%2FGastronomia%2Fnoticia%2F2018%2F07%2Freceita-esse-hamburguer-vegano-empanado-sera-seu-novo-melhor-amigo.html&psig=AOvVaw2tNZRY_YUa7xCTXFYMmp2V&ust=1741403216265000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCMiV3sP-9osDFQAAAAAdAAAAABAE" alt="Hambúrguer Vegano">
+                <h3>Hambúrguer Schregano</h3>
+                <p>Uma opção saudável e saborosa sem carne.</p>
+                <p>R$16,00</p>
+                <button onclick="adicionarAoCarrinho('Hambúrguer Vegano', 16)">Adicionar</button>
+            </div>
+            <div class="menu-item">
+                <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Freceitas.globo.com%2Fana-maria-braga%2Fsalgados%2Fbatata-frita-sequinha.ghtml&psig=AOvVaw31qjyNwTWc9su0Vrt2mmh7&ust=1741403251754000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNjb-9b-9osDFQAAAAAdAAAAABAE" alt="Batata Frita">
+                <h3>Batata Frita</h3>
+                <p>Porção de batatas fritas crocantes.</p>
+                <p>R$10,00</p>
+                <button onclick="adicionarAoCarrinho('Batata Frita', 10)">Adicionar</button>
+            </div>
+            <div class="menu-item">
+                <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.sabornamesa.com.br%2Freceitas-de-lanches%2Fhamburguer-gourmet-caseiro-simples-e-facil&psig=AOvVaw3cx0PzHrm1ErjaWi1iY6uw&ust=1741401934528000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPD5ttD99osDFQAAAAAdAAAAABAn" alt="Cheeseburger Especial">
+                <h3>Cheeseburger Schuratute</h3>
+                <p>Carne, queijo, alface, tomate e molho especial.</p>
+                <p>R$20,00</p>
+                <button onclick="adicionarAoCarrinho('Cheeseburger Especial', 20)">Adicionar</button>
+            </div>
+            <div class="menu-item">
+                <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.colombo.com.br%2Fblog%2Fgastronomia%2Fdia-do-hamburguer-receita-de-hamburguer-facil%2F&psig=AOvVaw3cx0PzHrm1ErjaWi1iY6uw&ust=1741401934528000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPD5ttD99osDFQAAAAAdAAAAABAx" alt="Hambúrguer de Frango">
+                <h3>Hambúrguer de Schucrute</h3>
+                <p>Frango grelhado, queijo e maionese temperada.</p>
+                <p>R$17,00</p>
+                <button onclick="adicionarAoCarrinho('Hambúrguer de Frango', 17)">Adicionar</button>
+            </div>
+            <div class="menu-item">
+                <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Faseguirniteroi.com.br%2Fnoticias%2Fsugestoes-para-celebrar-o-dia-do-hamburguer-em-niteroi%2F&psig=AOvVaw3cx0PzHrm1ErjaWi1iY6uw&ust=1741401934528000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPD5ttD99osDFQAAAAAdAAAAABA7" alt="X-Burger Supreme">
+                <h3>X-Burger Scklante</h3>
+                <p>Duplo queijo, carne grelhada e molho especial.</p>
+                <p>R$24,00</p>
+                <button onclick="adicionarAoCarrinho('X-Burger Supreme', 24)">Adicionar</button>
+            </div>
+        </section>
+        <aside>
+            <h2>Seu Pedido</h2>
+            <p>Total: R$<span id="total">0</span></p>
+            <button onclick="finalizarPedido()">Finalizar Pedido</button>
+        </aside>
+    </main>
+    <footer id="contato">
+        <p>Contato: +55 63 9111-6218</p>
+    </footer>
+    <script>
+        let total = 0;
+        function adicionarAoCarrinho(item, preco) {
+            total += preco;
+            document.getElementById("total").textContent = total.toFixed(2);
+            alert(item + " adicionado ao carrinho!");
+        }
+        function finalizarPedido() {
+            if (total === 0) {
+                alert("Seu carrinho está vazio!");
+            } else {
+                alert("Pedido finalizado! Total: R$ " + total.toFixed(2));
+                total = 0;
+                document.getElementById("total").textContent = "0";
+            }
+        }
+    </script>
+</body>
+</html>
